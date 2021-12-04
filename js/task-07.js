@@ -3,10 +3,10 @@ const refs = {
   textEl: document.querySelector('#text'),
 };
 
-const fontSize = (refs.textEl.style.fontSize = '20px');
+refs.textEl.style.fontSize = '30px';
 
 const onInputChange = (event) => {
-  fontSize == event.currentTarget.value;
+  refs.textEl.style.fontSize === event.currentTarget.value;
 };
 
 refs.inputEL.addEventListener('input', onInputChange);
