@@ -5,10 +5,10 @@ const refs = {
   valueEl: document.querySelector('#value'),
 };
 
-refs.decrementButtonEl.addEventListener('click', increaseValue);
-refs.incrementButtonEl.addEventListener('click', decreaseValue);
-
 const increaseValue = () => {
   console.log('click');
 };
 const decreaseValue = () => {};
+
+refs.decrementButtonEl.addEventListener('click', increaseValue);
+refs.incrementButtonEl.addEventListener('click', decreaseValue);
