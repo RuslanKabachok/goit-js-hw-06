@@ -14,11 +14,12 @@ const images = [
 ];
 
 const galleryEl = document.querySelector('.gallery');
+galleryEl.style.display = 'flex';
 
 const markup = images
   .map(
     (image) =>
-      `<li><img alt="${image.alt}" src="${image.url}" width="520"></li>`
+      `<li><img alt="${image.alt}" src="${image.url}" width="400" height="250"></li>`
   )
   .join('');
 
