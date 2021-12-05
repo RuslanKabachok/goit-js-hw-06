@@ -7,7 +7,11 @@ const refs = {
 
 const onInputChange = (event) => {
   // refs.textEl.style.fontSize === event.currentTarget.value;
-  refs.textEl.setAttribute('font-size', event.currentTarget.value);
+  refs.textEl.setAttribute(
+    'style',
+    `font-size: ${event.currentTarget.value}px`
+  );
+  // refs.textEl.setAttribute('style', `font-size: ${event.target.value}px`);
 };
 
 refs.inputEL.addEventListener('input', onInputChange);
