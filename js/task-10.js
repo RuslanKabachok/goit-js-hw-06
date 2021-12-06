@@ -19,12 +19,12 @@ const oncreateBtnElClick = (event) => {
 const createBoxes = (amount) => {
   for (let i = 0; i < amount; i++) {
     const divEl = document.createElement('div');
-    const size = 30;
-    divEl.textContent = 'Hurra! It works';
+    const size = 30 + i * 10;
+    // divEl.textContent = 'Hurra!';
     divEl.style.color = getRandomHexColor();
-    const newSize = size + i * 10;
-    // divEl.setAttribute('style', `width: ${newSize}px; height: ${newSize}px`);
-    // divEl.setAttribute('style', `height: ${newSize}px`);     color: ${getRandomHexColor()}
+    divEl.style.width = `${size}px`;
+    divEl.style.height = `${size}px`;
+    divEl.style.backgroundColor = getRandomHexColor();
     refs.boxesEl.append(divEl);
   }
 };
