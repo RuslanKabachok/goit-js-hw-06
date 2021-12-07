@@ -4,12 +4,11 @@ const refs = {
 };
 
 const onInput = (event) => {
-  refs.nameEl.textContent = event.currentTarget.value;
+  if (event.currentTarget.value !== '') {
+    refs.nameEl.textContent = event.currentTarget.value;
+  } else {
+    refs.nameEl.textContent = 'Anonymous';
+  }
 };
 
-// const onInputBlur = (event) => {
-//   refs.nameEl.textContent = 'Anonymous';
-// };
-
 refs.inputEl.addEventListener('input', onInput);
-// refs.inputEl.addEventListener('blur', onInputBlur);

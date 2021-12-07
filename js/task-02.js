@@ -7,13 +7,16 @@ const ingredients = [
   'Condiments',
 ];
 
-const createList = (arr) => {
-  const listEl = document.getElementById('ingredients');
-  for (const el of arr) {
-    const liEl = document.createElement('li');
-    liEl.textContent = el;
-    liEl.classList.add('item');
-    listEl.append(liEl);
-  }
-};
-createList(ingredients);
+const listEl = document.getElementById('ingredients');
+const lis = [];
+
+for (let i = 0; i < ingredients.length; i += 1) {
+  const el = ingredients[i];
+
+  const liEl = document.createElement('li');
+  liEl.textContent = el;
+  liEl.classList.add('item');
+  lis.push(liEl);
+}
+
+listEl.append(...lis);
